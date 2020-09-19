@@ -3,7 +3,11 @@ package edu.ppu.services;
 import java.util.List;
 
 public class ListSumService {
-    public int sum(List<Integer> numbers){
-        throw new RuntimeException("this method is not implemented yet");
-    }
+    int total = 0;
+    public int sum(int[] nums){
+        for (int i = 0; i < nums.length; i++){
+            total += nums[i];
+        }
+        return total;
+}
 }
