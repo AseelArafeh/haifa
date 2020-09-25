@@ -18,10 +18,10 @@ public class SumOverMaxService {
         if (numbers == null || numbers.length == 0) {
             throw new RuntimeException("list is empty");
 
-        } else if (listMaxService.getMax() == 0) {
+        } else if (listMaxService.getMax(numbers) == 0) {
             throw new RuntimeException("division by zero");
 
         } else
-            return listSumService.sum(numbers) / listMaxService.getMax();
+            return listSumService.getSum(numbers) / listMaxService.getMax(numbers);
     }
 }
