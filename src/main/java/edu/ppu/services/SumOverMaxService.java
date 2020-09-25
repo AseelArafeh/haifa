@@ -15,7 +15,7 @@ public class SumOverMaxService {
 
     public float getSumOverMax(List<Integer> numbers) {
 
-        if (numbers == null || numbers.length == 0) {
+        if (numbers == null || numbers.size() == 0) {
             throw new RuntimeException("list is empty");
 
         } else if (listMaxService.getMax(numbers) == 0) {
