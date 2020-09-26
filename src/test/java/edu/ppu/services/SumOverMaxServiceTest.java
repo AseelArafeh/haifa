@@ -25,8 +25,8 @@ public class SumOverMaxServiceTest {
         List<Integer> list = Arrays.asList(5, 2, 10);
         when(mockMAX.getMax(list)).thenReturn(10);
         when(mockSUM.getSum(list)).thenReturn(17);
-        float res = sumOverMax.getSumOverMax(list);
-        assertEquals(1.7, res);
+        int res = sumOverMax.getSumOverMax(list);
+        assertEquals(1, res);
     }
 
 }

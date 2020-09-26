@@ -13,7 +13,7 @@ public class SumOverMaxService {
         this.listSumService = listSumService;
     }
 
-    public float getSumOverMax(List<Integer> numbers) {
+    public int getSumOverMax(List<Integer> numbers) {
 
         if (numbers == null || numbers.size() == 0) {
             throw new RuntimeException("list is empty");
