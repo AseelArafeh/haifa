@@ -3,16 +3,25 @@ package edu.ppu.services;
 import java.util.List;
 
 public class SumOverMaxService {
+
+    private ListMaxService listMaxService;
+    private ListSumService listSumService;
+
     public SumOverMaxService(ListMaxService listMaxService,
                              ListSumService listSumService) {
         this.listMaxService = listMaxService;
         this.listSumService = listSumService;
     }
 
-    private ListMaxService listMaxService;
-    private ListSumService listSumService;
-
     public float getSumOverMax(List<Integer> numbers) {
-        throw new RuntimeException("this method is not implemented yet");
+
+        if (numbers == null || numbers.size() == 0) {
+            throw new RuntimeException("list is empty");
+
+        } else if (listMaxService.getMax(numbers) == 0) {
+            throw new RuntimeException("division by zero");
+
+        } else
+            return listSumService.getSum(numbers) / listMaxService.getMax(numbers);
     }
 }
