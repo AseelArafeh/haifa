@@ -14,7 +14,7 @@ public class ListMaxServiceTest {
             ListMaxService listMax = new ListMaxService();
             int res = listMax.getMax(list);
             assertEquals(10, res);
-            //comment
+
         }
 
 }
