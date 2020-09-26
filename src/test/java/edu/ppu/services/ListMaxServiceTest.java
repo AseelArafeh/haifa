@@ -13,7 +13,7 @@ public class ListMaxServiceTest {
             List<Integer> list = Arrays.asList(5, 2, 10);
             ListMaxService listMax = new ListMaxService();
             int res = listMax.getMax(list);
-            assertEquals(10, res);
+            assertEquals(5, res);
         }
 
 }
